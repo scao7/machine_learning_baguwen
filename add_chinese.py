@@ -52,7 +52,7 @@ args = parser.parse_args()
 # Quote the notebook file path to handle spaces
 notebook_file_quoted = shlex.quote(args.notebook_file)
 
-command = fr"jupyter nbconvert --to latex {notebook_file_quoted}"
+command = f"jupyter nbconvert --to latex {notebook_file_quoted}"
 print(command)
 os.system(command)
 
@@ -66,4 +66,4 @@ code_to_add = r'''
 read_and_append_tex_file(file_path, code_to_add)
 
 os.system(f"xelatex  {file_path}")
-
+os.system("del *.aux *.log *.out")

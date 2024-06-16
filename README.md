@@ -12,7 +12,6 @@ add
 xelatex  中文.tex
 
 
+一建转换pdf
+python add_chinese.py baguwen_variance_bias.ipynb
 
-auto convert 
-jupyter nbconvert --to latex "机器学习八股文 Variance and Bias.ipynb"
-python add_chinese.py "机器学习八股文 Variance and Bias.tex"
